@@ -47,7 +47,7 @@ mySub :: (Eq a) => [(a,a)] -> [a] -> [a]
 mySub xs ys =  if null xs then error "first list cant be null" else if null ys then ys
 			  else if length xs == 1 then myRep1 (head xs) ys  else mySub (tail xs) (myRep1 (head xs) ys)
 
--- Get the sum of elements in a list of integers
+-- Param1: Int, Param2: List - gets sum of all instances of given int in the list
 myElemSum :: Int -> [Int] -> Int
 myElemSum y xs = if null xs then 0 else if head xs == y then y + (myElemSum y (tail xs)) 
 	             else myElemSum y (tail xs)

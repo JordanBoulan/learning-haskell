@@ -66,7 +66,7 @@ mySub :: (Eq a) => [(a,a)] -> [a] -> [a]
 mySub [] ys = ys
 mySub (p:ps) ys = mySub ps (myRepl p ys)
 
--- Get the sum of elements in a list of integers
+-- Param1: Int, Param2: List - gets sum of all instances of given int in the list
 myElemSum :: Int -> [Int] -> Int
 myElemSum y [] = 0  
 myElemSum y xs 
